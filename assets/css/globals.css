@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Inter', sans-serif;
+  }
+  body {
+    background-color: #0F172A;
+    color: #E2E8F0;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-[#1E293B] rounded-lg shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .sidebar-item {
+    @apply transition-all duration-200 hover:bg-[#334155];
+  }
+
+  .sidebar-item.active {
+    @apply bg-[#3B82F6] border-l-4 border-[#FBBF24];
+  }
+
+  .btn-primary {
+    @apply bg-[#3B82F6] text-white transition-all duration-200 hover:bg-[#2563EB] hover:-translate-y-1;
+  }
+
+  .btn-secondary {
+    @apply bg-[#FBBF24] text-[#1E293B] transition-all duration-200 hover:bg-[#F59E0B] hover:-translate-y-1;
+  }
+
+  .input-field {
+    @apply bg-[#334155] border border-[#475569] text-[#E2E8F0] transition-all duration-200 focus:outline-none focus:border-[#3B82F6] focus:ring-2 focus:ring-[#3B82F6]/25;
+  }
+
+  .badge {
+    @apply rounded-full px-3 py-1 text-xs font-medium;
+  }
+
+  .badge-pending {
+    @apply bg-[#FCD34D] text-[#92400E];
+  }
+
+  .badge-approved {
+    @apply bg-[#22C55E] text-white;
+  }
+
+  .badge-rejected {
+    @apply bg-[#EF4444] text-white;
+  }
+
+  .priority-badge {
+    @apply rounded px-2 py-0.5 text-xs font-medium;
+  }
+
+  .priority-high {
+    @apply bg-[#EF4444] text-white;
+  }
+
+  .priority-medium {
+    @apply bg-[#FCD34D] text-[#92400E];
+  }
+
+  .priority-low {
+    @apply bg-[#22C55E] text-white;
+  }
+}
